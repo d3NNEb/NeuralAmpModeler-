@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"doxdocgen.generic.briefTemplate": "{text}",
+		"files.associations": {
+			"vector": "cpp"
+		},
+	}
+}

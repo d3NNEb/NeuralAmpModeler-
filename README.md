@@ -1,4 +1,4 @@
-# Neural Amp Modeler Plug-in
+# Neural Amp Modeler Plug-in with enhancements
 
 Based on the work of https://github.com/sdatkinson/NeuralAmpModelerPlugin
 

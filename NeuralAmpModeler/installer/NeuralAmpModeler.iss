@@ -35,7 +35,7 @@ Name: "app"; Description: "Standalone application (.exe)"; Types: full custom;
 ;Name: "vst2_32"; Description: "32-bit VST2 Plugin (.dll)"; Types: full custom;
 ;Name: "vst2_64"; Description: "64-bit VST2 Plugin (.dll)"; Types: full custom; Check: Is64BitInstallMode;
 ;Name: "vst3_32"; Description: "32-bit VST3 Plugin (.vst3)"; Types: full custom;
-Name: "vst3_64"; Description: "64-bit VST3 Plugin (.vst3)"; Types: full custom; Check: Is64BitInstallMode;
+;Name: "vst3_64"; Description: "64-bit VST3 Plugin (.vst3)"; Types: full custom; Check: Is64BitInstallMode;
 ;Name: "aax_32"; Description: "32-bit AAX Plugin (.aaxplugin)"; Types: full custom;
 ;Name: "aax_64"; Description: "64-bit AAX Plugin (.aaxplugin)"; Types: full custom; Check: Is64BitInstallMode;
 Name: "manual"; Description: "User guide"; Types: full custom; Flags: fixed
@@ -44,7 +44,7 @@ Name: "manual"; Description: "User guide"; Types: full custom; Flags: fixed
 ;Name: "{cf32}\Avid\Audio\Plug-Ins\NeuralAmpModeler.aaxplugin\"; Attribs: readonly; Components:aax_32; 
 ;Name: "{cf64}\Avid\Audio\Plug-Ins\NeuralAmpModeler.aaxplugin\"; Attribs: readonly; Check: Is64BitInstallMode; Components:aax_64; 
 ;Name: "{cf32}\VST3\NeuralAmpModeler.vst3\"; Attribs: readonly; Components:vst3_32; 
-Name: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Attribs: readonly; Check: Is64BitInstallMode; Components:vst3_64; 
+;Name: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Attribs: readonly; Check: Is64BitInstallMode; Components:vst3_64; 
 
 [Files]
 ;Source: "..\build-win\NeuralAmpModeler_Win32.exe"; DestDir: "{app}"; Check: not Is64BitInstallMode; Components:app; Flags: ignoreversion;
@@ -58,9 +58,9 @@ Source: "..\build-win\NeuralAmpModeler_x64.exe"; DestDir: "{app}"; Check: Is64Bi
 ;Source: "..\build-win\NeuralAmpModeler.vst3\Desktop.ini"; DestDir: "{cf32}\VST3\NeuralAmpModeler.vst3\"; Components:vst3_32; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
 ;Source: "..\build-win\NeuralAmpModeler.vst3\PlugIn.ico"; DestDir: "{cf32}\VST3\NeuralAmpModeler.vst3\"; Components:vst3_32; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
 
-Source: "..\build-win\NeuralAmpModeler.vst3\*.*"; Excludes: "\Contents\x86\*,*.pdb,*.exp,*.lib,*.ilk,*.ico,*.ini"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: ignoreversion recursesubdirs;
-Source: "..\build-win\NeuralAmpModeler.vst3\Desktop.ini"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
-Source: "..\build-win\NeuralAmpModeler.vst3\PlugIn.ico"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
+;Source: "..\build-win\NeuralAmpModeler.vst3\*.*"; Excludes: "\Contents\x86\*,*.pdb,*.exp,*.lib,*.ilk,*.ico,*.ini"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: ignoreversion recursesubdirs;
+;Source: "..\build-win\NeuralAmpModeler.vst3\Desktop.ini"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
+;Source: "..\build-win\NeuralAmpModeler.vst3\PlugIn.ico"; DestDir: "{cf64}\VST3\NeuralAmpModeler.vst3\"; Check: Is64BitInstallMode; Components:vst3_64; Flags: overwritereadonly ignoreversion; Attribs: hidden system;
 
 ;Source: "..\build-win\aax\bin\NeuralAmpModeler.aaxplugin\*.*"; Excludes: "\Contents\x64\*,*.pdb,*.exp,*.lib,*.ilk,*.ico,*.ini"; DestDir: "{cf32}\Avid\Audio\Plug-Ins\NeuralAmpModeler.aaxplugin\"; Components:aax_32; Flags: ignoreversion recursesubdirs;
 ;Source: "..\build-win\aax\bin\NeuralAmpModeler.aaxplugin\Desktop.ini"; DestDir: "{cf32}\Avid\Audio\Plug-Ins\NeuralAmpModeler.aaxplugin\"; Components:aax_32; Flags: overwritereadonly ignoreversion; Attribs: hidden system;

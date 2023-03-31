@@ -13,7 +13,7 @@ To install locally:
 
 1) Download Zip and unzip, or clone this repo to your computer
 
-2) Download InnoSetup from https://jrsoftware.org/isdl.php
+2) Download and install InnoSetup from https://jrsoftware.org/isdl.php
 
 3) After installation, open InnoSetup and from the folder you used in 1), 
 	navigate to and open \NeuralAmpModeler-\NeuralAmpModeler\installer\NeuralAmpModeler.iss

@@ -223,7 +223,8 @@ NeuralAmpModeler::NeuralAmpModeler(const InstanceInfo &info)
     // Model loader button
     auto loadNAM = [&, pGraphics](IControl *pCaller) {
       WDL_String initFileName;
-      WDL_String initPath(this->mNAMPath.remove_filepart());
+      //WDL_String initPath(this->mNAMPath.remove_filepart());
+      WDL_String initPath = this->mNAMPath;
       pGraphics->PromptForFile(
           initFileName, initPath, EFileAction::Open, "nam",
           [&](const WDL_String &fileName, const WDL_String &path) {
@@ -280,7 +281,8 @@ NeuralAmpModeler::NeuralAmpModeler(const InstanceInfo &info)
     // IR loader button
     auto loadIR = [&, pGraphics](IControl *pCaller) {
       WDL_String initFileName;
-      WDL_String initPath(this->mIRPath.remove_filepart());
+      //WDL_String initPath(this->mIRPath.remove_filepart());
+      WDL_String initPath = this->mIRPath;
       pGraphics->PromptForFile(
           initFileName, initPath, EFileAction::Open, "wav",
           [&](const WDL_String &fileName, const WDL_String &path) {
@@ -834,7 +836,14 @@ std::string NeuralAmpModeler::_GetNAM(const WDL_String &modelPath) {
     auto dspPath = std::filesystem::path(modelPath.Get());
     mStagedNAM = get_dsp(dspPath);
     this->_SetModelMsg(modelPath);
-    this->mNAMPath = modelPath;
+
+    // carlo
+    std::string fullPathOnly = modelPath.Get();
+    size_t last_pos = fullPathOnly.find_last_of("\\");
+    fullPathOnly.replace(last_pos, (fullPathOnly.length() - last_pos), "");
+    this->mNAMPath = WDL_String(fullPathOnly.c_str());
+
+    //this->mNAMPath = modelPath;
   } catch (std::exception &e) {
     std::stringstream ss;
     ss << "FAILED to load model";
@@ -870,7 +879,14 @@ dsp::wav::LoadReturnCode NeuralAmpModeler::_GetIR(const WDL_String &irPath) {
 
   if (wavState == dsp::wav::LoadReturnCode::SUCCESS) {
     this->_SetIRMsg(irPath);
-    this->mIRPath = irPath;
+
+    // carlo
+    std::string fullPathOnly = irPath.Get();
+    size_t last_pos = fullPathOnly.find_last_of("\\");
+    fullPathOnly.replace(last_pos, (fullPathOnly.length() - last_pos), "");
+    this->mIRPath = WDL_String(fullPathOnly.c_str());
+
+    //this->mIRPath = irPath;
   } else {
     if (this->mStagedIR != nullptr) {
       this->mStagedIR = nullptr;

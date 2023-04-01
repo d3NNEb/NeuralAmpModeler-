@@ -6,8 +6,6 @@ Added NAM/IR folder nav buttons.
 
 Once a NAM/IR is selected, nav buttons (up/down) will appear to quickly load the files in the selected NAM/IR's containing folder. If the NAM/IR is cleared, the nav buttons will become hidden, but will re-appear upon new selection. If the NAM/IR selected is the only file in the folder, the buttons will not appear.
 
-The .vst3 file (Windows 64-bit only) is in NeuralAmpModeler-\vst3\
-Copy it to C:\Program Files\Common Files\VST3\NeuralAmpModeler.vst3\Contents\x86_64-win on your computer
 
 
 

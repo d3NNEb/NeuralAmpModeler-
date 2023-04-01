@@ -2,6 +2,9 @@
 
 Based on the work of https://github.com/sdatkinson/NeuralAmpModelerPlugin
 
+and https://github.com/iPlug2/iPlug2
+
+
 Added NAM/IR folder nav buttons.
 
 Once a NAM/IR is selected, nav buttons (up/down) will appear to quickly load the files in the selected NAM/IR's containing folder. If the NAM/IR is cleared, the nav buttons will become hidden, but will re-appear upon new selection. If the NAM/IR selected is the only file in the folder, the buttons will not appear.

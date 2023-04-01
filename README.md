@@ -9,7 +9,7 @@ Once a NAM/IR is selected, nav buttons (up/down) will appear to quickly load the
 
 The .vst3 file (Windows 64-bit only) is in NeuralAmpModeler-\vst3\
 
-Grab it from this page https://github.com/d3NNEb/NeuralAmpModeler-/tree/main/vst3
+Grab it from https://github.com/d3NNEb/NeuralAmpModeler-/blob/main/vst3/NeuralAmpModeler.vst3
 Copy it to C:\Program Files\Common Files\VST3\NeuralAmpModeler.vst3\Contents\x86_64-win on your computer
 
 

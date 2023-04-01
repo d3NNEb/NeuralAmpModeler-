@@ -6,10 +6,12 @@ Added NAM/IR folder nav buttons.
 
 Once a NAM/IR is selected, nav buttons (up/down) will appear to quickly load the files in the selected NAM/IR's containing folder. If the NAM/IR is cleared, the nav buttons will become hidden, but will re-appear upon new selection. If the NAM/IR selected is the only file in the folder, the buttons will not appear.
 
-This is currently only in the NeuralAmpModeler-app project (standalone version), only for Windows 64-bit.
+The .vst3 file (Windows 64-bit only) is in NeuralAmpModeler-\NeuralAmpModeler\build-win\vst3\x64\Debug
+Copy it to C:\Program Files\Common Files\VST3\NeuralAmpModeler.vst3\Contents\x86_64-win on your computer
 
 
-To install locally:
+
+To install locally (currently only in the NeuralAmpModeler-app project, only for Windows 64-bit):
 
 1) Download Zip and unzip, or clone this repo to your computer
 
@@ -21,6 +23,7 @@ To install locally:
 4) From the top menu, select Build -> Compile, then hit F9 to run the installer
 
 5) Should install to C:\Program Files\NeuralAmpModeler - enjoy!
+
 
 
 For compiling the project in Visual Studio, see https://www.youtube.com/watch?v=W8Ff3xcsD1Y

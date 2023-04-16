@@ -11,10 +11,10 @@
 
 #include "IGraphicsStructs.h"
 
-namespace PluginColors {
+namespace PluginColors
+{
 // COLORS!
-const iplug::igraphics::IColor
-    OFF_WHITE(255, 243, 246, 249); // Material UI because Heidi said so
+const iplug::igraphics::IColor OFF_WHITE(255, 243, 246, 249); // Material UI because Heidi said so
 
 // From group photo
 // const iplug::igraphics::IColor NAM_5(255, 206, 194, 224);  // Languid
@@ -52,11 +52,12 @@ const iplug::igraphics::IColor
 // Lavender Blue
 
 // Blue mode
-const iplug::igraphics::IColor NAM_1(255, 29, 26, 31);    // Raisin Black
-const iplug::igraphics::IColor NAM_2(255, 80, 133, 232);  // Azure
-const iplug::igraphics::IColor NAM_3(255, 162, 178, 191); // Cadet Blue Crayola
+// const iplug::igraphics::IColor NAM_1(255, 29, 26, 31);    // Raisin Black
+// const iplug::igraphics::IColor NAM_2(255, 80, 133, 232);  // Azure
+// const iplug::igraphics::IColor NAM_3(255, 162, 178, 191); // Cadet Blue Crayola
 // Alts
-// const iplug::igraphics::IColor NAM_1(255, 18, 17, 19);  // Smoky Black
+// const iplug::igraphics::IColor NAM_1(0, 18, 17, 19);  // Transparent
+// const iplug::igraphics::IColor NAM_2(255, 236, 7, 23);  // red
 // const iplug::igraphics::IColor NAM_2(255, 126, 188, 230);  // Camel
 // const iplug::igraphics::IColor NAM_2(255, 152, 202, 235);  // Pale Cerulean
 // const iplug::igraphics::IColor NAM_2(255, 46, 116, 163);  // French Blue
@@ -66,8 +67,13 @@ const iplug::igraphics::IColor NAM_3(255, 162, 178, 191); // Cadet Blue Crayola
 // const iplug::igraphics::IColor NAM_3(255, 207, 220, 229);  // Beau Blue
 // const iplug::igraphics::IColor NAM_3(255, 187, 199, 208);  // Silver Sand
 
+const iplug::igraphics::IColor NAM_0(0, 18, 17, 19); // Transparent
+const iplug::igraphics::IColor NAM_2(255, 236, 7, 23); // Red
+// const iplug::igraphics::IColor NAM_2(255, 24, 205, 238); // Teal
+const iplug::igraphics::IColor NAM_3(255, 242, 242, 242); // Dark Ehite
+
 // Misc
-const iplug::igraphics::IColor MOUSEOVER = NAM_3.WithOpacity(0.3);
+const iplug::igraphics::IColor MOUSEOVER = NAM_3.WithOpacity(0.1);
 const iplug::igraphics::IColor HELP_TEXT = iplug::igraphics::COLOR_WHITE;
 }; // namespace PluginColors
 

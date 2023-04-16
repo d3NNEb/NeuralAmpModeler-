@@ -12,9 +12,10 @@
 using namespace iplug;
 using namespace igraphics;
 
-class FolderBrowser {
+class FolderBrowser
+{
 private:
-  inline static IGraphics *lGraphics;
+  inline static IGraphics* lGraphics;
   inline static int l_iCurrentNAMIndex = 0;
   inline static int l_iCurrentIRIndex = 0;
   inline static std::vector<std::string> _oNAMs;
@@ -23,7 +24,7 @@ private:
   inline static std::string _oCurrentIR;
 
 public:
-  FolderBrowser::FolderBrowser(IGraphics *pGraphics);
+  FolderBrowser::FolderBrowser(IGraphics* pGraphics);
 
   void InitializeNAMNav(WDL_String fileName);
 

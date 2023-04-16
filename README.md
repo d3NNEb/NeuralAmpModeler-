@@ -1,17 +1,34 @@
-# Neural Amp Modeler Plug-in
+# Neural Amp Modeler Plug-in with enhancements
 
-A VST3/AudioUnit plug-in\* for [Neural Amp Modeler](https://github.com/sdatkinson/neural-amp-modeler), built with [iPlug2](https://iplug2.github.io).
+Based on the work of https://github.com/sdatkinson/NeuralAmpModelerPlugin
 
-- https://www.youtube.com/user/RunawayThumbtack
-- https://github.com/sdatkinson/neural-amp-modeler
+and https://github.com/iPlug2/iPlug2
 
-## Installation
 
-Check the [Releases](https://github.com/sdatkinson/NeuralAmpModelerPlugin/releases) for pre-built installers for the plugin!
+Added NAM/IR folder nav buttons.
 
-## About
+Once a NAM/IR is selected, nav buttons (up/down) will appear to quickly load the files in the selected NAM/IR's containing folder. If the NAM/IR is cleared, the nav buttons will become hidden, but will re-appear upon new selection. If the NAM/IR selected is the only file in the folder, the buttons will not appear.
 
-This is a cleaned up version of [the original iPlug2-based NAM plugin](https://github.com/sdatkinson/iPlug2) with some refactoring to adopt better practices recommended by the developers of iPlug2.
-(Thanks [Oli](https://github.com/olilarkin) for your generous suggestions!)
 
-\*could also support VST2, AAX, CLAP, Linux, iOS soon.
+The .vst3 file (Windows 64-bit only) is in NeuralAmpModeler-\vst3\
+
+Grab it from https://github.com/d3NNEb/NeuralAmpModeler-/blob/main/vst3/NeuralAmpModeler.vst3
+Copy it to C:\Program Files\Common Files\VST3\NeuralAmpModeler.vst3\Contents\x86_64-win on your computer
+
+
+To install locally (currently only in the NeuralAmpModeler-app project, only for Windows 64-bit):
+
+1) Download Zip and unzip, or clone this repo to your computer
+
+2) Download and install InnoSetup from https://jrsoftware.org/isdl.php
+
+3) After installation, open InnoSetup and from the folder you used in 1), 
+	navigate to and open \NeuralAmpModeler-\NeuralAmpModeler\installer\NeuralAmpModeler.iss
+	
+4) From the top menu, select Build -> Compile, then hit F9 to run the installer
+
+5) Should install to C:\Program Files\NeuralAmpModeler - enjoy!
+
+
+
+For compiling the project in Visual Studio, see https://www.youtube.com/watch?v=W8Ff3xcsD1Y

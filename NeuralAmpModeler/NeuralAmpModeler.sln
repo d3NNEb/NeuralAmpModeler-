@@ -7,8 +7,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuralAmpModeler-app", "pro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuralAmpModeler-vst3", "projects\NeuralAmpModeler-vst3.vcxproj", "{079FC65A-F0E5-4E97-B318-A16D1D0B89DF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NeuralAmpModeler-aax", "projects\NeuralAmpModeler-aax.vcxproj", "{DC4B5920-933D-4C82-B842-F34431D55A93}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -43,18 +41,6 @@ Global
 		{079FC65A-F0E5-4E97-B318-A16D1D0B89DF}.Tracer|Win32.Build.0 = Tracer|Win32
 		{079FC65A-F0E5-4E97-B318-A16D1D0B89DF}.Tracer|x64.ActiveCfg = Tracer|x64
 		{079FC65A-F0E5-4E97-B318-A16D1D0B89DF}.Tracer|x64.Build.0 = Tracer|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Debug|Win32.ActiveCfg = Debug|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Debug|Win32.Build.0 = Debug|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Debug|x64.ActiveCfg = Debug|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Debug|x64.Build.0 = Debug|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Release|Win32.ActiveCfg = Release|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Release|Win32.Build.0 = Release|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Release|x64.ActiveCfg = Release|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Release|x64.Build.0 = Release|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Tracer|Win32.ActiveCfg = Tracer|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Tracer|Win32.Build.0 = Tracer|Win32
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Tracer|x64.ActiveCfg = Tracer|x64
-		{DC4B5920-933D-4C82-B842-F34431D55A93}.Tracer|x64.Build.0 = Tracer|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

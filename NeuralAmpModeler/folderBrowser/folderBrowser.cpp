@@ -1,4 +1,11 @@
 #include "folderBrowser.h"
+#include <NeuralAmpModeler.h>
+
+
+FolderBrowser::FolderBrowser()
+{
+  lGraphics = nullptr;
+}
 
 
 FolderBrowser::FolderBrowser(IGraphics* pGraphics)
@@ -36,7 +43,8 @@ void FolderBrowser::InitializeNAMNav(WDL_String fileName)
     }
   }
 
-  if (_oNAMs.size() > 1)
+
+  if (_oCurrentNAM != "" && _oNAMs.size() > 1)
   {
     // more than one NAM in current folder, show arrows
     ShowNAMArrows();
@@ -152,17 +160,17 @@ int FolderBrowser::FinishNAMNavDown(std::string l_sMsg)
 
 void FolderBrowser::ShowNAMArrows()
 {
-  IControl* l_oUpArrow = lGraphics->GetControlWithTag(250); // 250 = NAM up arrow
+  IControl* l_oUpArrow = lGraphics->GetControlWithTag(kCtrlTagNAMNavUp); // kCtrlTagNAMNavDown = NAM up arrow
   l_oUpArrow->Hide(false);
-  IControl* l_oDownArrow = lGraphics->GetControlWithTag(251); // 251 = NAM down arrow
+  IControl* l_oDownArrow = lGraphics->GetControlWithTag(kCtrlTagNAMNavDown); // kCtrlTagNAMNavUp = NAM down arrow
   l_oDownArrow->Hide(false);
 }
 
 void FolderBrowser::HideNAMArrows()
 {
-  IControl* l_oUpArrow = lGraphics->GetControlWithTag(250); // 250 = NAM up arrow
+  IControl* l_oUpArrow = lGraphics->GetControlWithTag(kCtrlTagNAMNavUp); // kCtrlTagNAMNavDown = NAM up arrow
   l_oUpArrow->Hide(true);
-  IControl* l_oDownArrow = lGraphics->GetControlWithTag(251); // 251 = NAM down arrow
+  IControl* l_oDownArrow = lGraphics->GetControlWithTag(kCtrlTagNAMNavDown); // kCtrlTagNAMNavUp = NAM down arrow
   l_oDownArrow->Hide(true);
 }
 
@@ -196,7 +204,7 @@ void FolderBrowser::InitializeIRNav(WDL_String fileName)
     }
   }
 
-  if (_oIRs.size() > 1)
+  if (_oCurrentIR != "" && _oIRs.size() > 1)
   {
     // more than one .wav in current folder, show arrows
     ShowIRArrows();
@@ -352,16 +360,16 @@ int FolderBrowser::FinishIRNavDown(dsp::wav::LoadReturnCode l_sMsg)
 
 void FolderBrowser::ShowIRArrows()
 {
-  IControl* l_oUpArrow = lGraphics->GetControlWithTag(252); // 252 = IR up arrow
+  IControl* l_oUpArrow = lGraphics->GetControlWithTag(kCtrlTagIRNavUp); // kCtrlTagIRNavUp = IR up arrow
   l_oUpArrow->Hide(false);
-  IControl* l_oDownArrow = lGraphics->GetControlWithTag(253); // 253 = IR down arrow
+  IControl* l_oDownArrow = lGraphics->GetControlWithTag(kCtrlTagIRNavDown); // kCtrlTagIRNavDown = IR down arrow
   l_oDownArrow->Hide(false);
 }
 
 void FolderBrowser::HideIRArrows()
 {
-  IControl* l_oUpArrow = lGraphics->GetControlWithTag(252); // 252 = IR up arrow
+  IControl* l_oUpArrow = lGraphics->GetControlWithTag(kCtrlTagIRNavUp); // kCtrlTagIRNavUp = IR up arrow
   l_oUpArrow->Hide(true);
-  IControl* l_oDownArrow = lGraphics->GetControlWithTag(253); // 253 = IR down arrow
+  IControl* l_oDownArrow = lGraphics->GetControlWithTag(kCtrlTagIRNavDown); // kCtrlTagIRNavDown = IR down arrow
   l_oDownArrow->Hide(true);
 }

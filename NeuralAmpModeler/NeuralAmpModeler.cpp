@@ -795,16 +795,7 @@ std::string NeuralAmpModeler::_GetNAM(const WDL_String& modelPath)
     auto dspPath = std::filesystem::path(modelPath.Get());
     mStagedNAM = get_dsp(dspPath);
     this->_SetModelMsg(modelPath);
-
-    // why ?? - this will only show the containing nam folder in loaded disply when vst is reopened
-    // carlo
-    /* std::string fullPathOnly = modelPath.Get();
-     size_t last_pos = fullPathOnly.find_last_of("\\");
-     fullPathOnly.replace(last_pos, (fullPathOnly.length() - last_pos), "");
-     this->mNAMPath = WDL_String(fullPathOnly.c_str());*/
-
     this->mNAMPath = modelPath;
-    //this->mFolderBrowser.InitializeNAMNav(this->mNAMPath);
   }
   catch (std::exception& e)
   {
@@ -845,14 +836,6 @@ dsp::wav::LoadReturnCode NeuralAmpModeler::_GetIR(const WDL_String& irPath)
   if (wavState == dsp::wav::LoadReturnCode::SUCCESS)
   {
     this->_SetIRMsg(irPath);
-
-    // why ?? - this will only show the containing nam folder in loaded disply when vst is reopened
-    // carlo
-    /* std::string fullPathOnly = irPath.Get();
-     size_t last_pos = fullPathOnly.find_last_of("\\");
-     fullPathOnly.replace(last_pos, (fullPathOnly.length() - last_pos), "");
-     this->mIRPath = WDL_String(fullPathOnly.c_str());*/
-
     this->mIRPath = irPath;
   }
   else

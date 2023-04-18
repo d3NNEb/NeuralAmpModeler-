@@ -4,6 +4,8 @@ Based on the work of https://github.com/sdatkinson/NeuralAmpModelerPlugin
 
 and https://github.com/iPlug2/iPlug2
 
+and https://github.com/fichl/NeuralAmpModelerPlugin/tree/new_skin_only
+
 
 Added NAM/IR folder nav buttons.
 
